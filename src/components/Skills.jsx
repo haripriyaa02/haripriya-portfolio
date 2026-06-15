@@ -27,7 +27,7 @@ const skillGroups = [
   },
   {
     title: 'AI Tools for Productivity',
-    tags: ['ChatGPT', 'Claude', 'GitHub Copilot', 'Cursor', 'Lovable', 'Perplexity'],
+    tags: ['ChatGPT', 'Claude', 'GitHub Copilot', 'Lovable', 'Perplexity'],
   },
   {
     title: 'Soft Skills',
