@@ -14,7 +14,7 @@ const projects = [
     title: 'Web-Based Ambulance ETA Prediction System',
     desc: 'Web application predicting ambulance ETAs and automatically notifying traffic authorities for timely signal clearance. Interactive mapping with real-time route calculations.',
     tags: ['Flask', 'Leaflet.js', 'Geopy', 'Twilio API', 'Python'],
-    github: 'https://github.com/haripriyaa02',
+    github: 'https://github.com/haripriyaa02/Web-Based-Ambulance-ETA-Prediction-System',
     type: 'Personal Project · 2025',
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     title: 'Automated Pneumonia Detection using Deep Learning',
     desc: 'MobileNetV2 deep learning model for Pneumonia vs. Normal X-ray classification with Grad-CAM interpretability. Achieved 87% accuracy optimized for resource-constrained environments.',
     tags: ['Python', 'TensorFlow/Keras', 'OpenCV', 'NumPy', 'Matplotlib'],
-    github: 'https://github.com/haripriyaa02',
+    github: 'https://github.com/haripriyaa02/Pneumonia-Detection',
     type: 'AI/ML Project · 2025',
   },
   {
@@ -34,13 +34,20 @@ const projects = [
     type: 'QA Utility · 2025',
   },
   {
+    emoji: '🎓',
+    title: 'Placement Portal Web Application',
+    desc: 'Full-stack web application for institutions to efficiently manage and monitor placement drives and activities. Supports multi-role access for students, companies, and administrators — covering job postings, application tracking, and placement analytics in one unified platform.',
+    tags: ['Python', 'Flask', 'HTML', 'CSS', 'SQLite', 'Jinja2'],
+    github: 'https://github.com/haripriyaa02/placement-portal-app-v1',
+    type: 'Personal Project · 2025',
+  },
+  {
     emoji: '🗺️',
     title: 'ATLAS — Adaptive Thresholding with Language-Augmented Sensing',
     desc: 'Full-stack AI road segmentation platform combining UNet (ResNet34, 85%+ IoU) with 5 classical CV methods. Features a Next.js UI with method comparison, confidence heatmaps, ground truth annotation, batch processing, and Better Auth + Neon PostgreSQL for persistent results.',
     tags: ['PyTorch', 'UNet', 'FastAPI', 'Next.js', 'TypeScript', 'OpenCV', 'Neon PostgreSQL'],
     github: 'https://github.com/haripriyaa02/ATLAS',
     type: 'Personal Project · 2026',
-    hackathon: false,
   },
   {
     emoji: '✈️',
@@ -52,7 +59,7 @@ const projects = [
     hackathon: true,
   },
   {
-    emoji: '🎓',
+    emoji: '🎯',
     title: 'AdaptLearn — AI-Adaptive Onboarding Engine',
     desc: 'Intelligent full-stack platform that eliminates guesswork in corporate upskilling. Parses resumes against JDs for ATS scoring with line-by-line rewrite suggestions, generates diagnostic quizzes, and renders interactive DAG learning roadmaps powered by LLaMA-3 via Groq.',
     tags: ['Next.js', 'FastAPI', 'LLaMA-3', 'Groq API', 'React Flow', 'TypeScript', 'PyMuPDF'],
