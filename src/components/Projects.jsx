@@ -6,7 +6,7 @@ const projects = [
     title: 'AI-Driven API Test Script Conversion & Validation',
     desc: 'LLM-based system to convert Postman API test scripts with prompt optimization for high accuracy. Automated regression runs via Jenkins CI for faster failure detection and continuous validation.',
     tags: ['Postman', 'OpenAI API', 'JavaScript', 'REST APIs', 'Newman', 'Jenkins'],
-    github: 'https://github.com/haripriyaa02',
+    github: 'https://github.com/haripriyaa02/postman-converter',
     type: 'Internship Project · 2025–2026',
   },
   {
