@@ -174,23 +174,57 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right: animated ring avatar */}
+          {/* Right: dual counter-rotating ring avatar */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, flexShrink: 0 }}>
-            <div style={{ position: 'relative', width: 150, height: 150 }}>
-              {/* Spinning gradient ring */}
+            <div style={{ position: 'relative', width: 170, height: 170 }}>
+
+              {/* Soft glow behind everything */}
+              <div style={{
+                position: 'absolute', inset: -10, borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(232,121,249,0.18) 0%, rgba(124,58,237,0.12) 60%, transparent 80%)',
+                filter: 'blur(8px)',
+              }} />
+
+              {/* Outer ring — spins clockwise, dashed violet */}
               <div style={{
                 position: 'absolute', inset: 0, borderRadius: '50%',
-                background: 'conic-gradient(#7c3aed, #e879f9, #a855f7, #c026d3, #7c3aed)',
-                animation: 'spinRing 4s linear infinite',
-              }} />
-              {/* Gap ring (dark bg) */}
+                border: '2px dashed rgba(124,58,237,0.7)',
+                animation: 'spinCW 8s linear infinite',
+              }}>
+                {/* Orbiting dot on outer ring */}
+                <div style={{
+                  position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)',
+                  width: 8, height: 8, borderRadius: '50%',
+                  background: '#7c3aed',
+                  boxShadow: '0 0 8px #7c3aed, 0 0 16px rgba(124,58,237,0.6)',
+                }} />
+              </div>
+
+              {/* Inner ring — spins counter-clockwise, solid fuchsia gradient */}
               <div style={{
-                position: 'absolute', inset: 4, borderRadius: '50%',
+                position: 'absolute', inset: 10, borderRadius: '50%',
+                background: 'conic-gradient(transparent 60%, #e879f9 75%, #a855f7 85%, transparent 100%)',
+                animation: 'spinCCW 3s linear infinite',
+              }}>
+                {/* Orbiting dot on inner ring */}
+                <div style={{
+                  position: 'absolute', top: -3, left: '50%', transform: 'translateX(-50%)',
+                  width: 6, height: 6, borderRadius: '50%',
+                  background: '#e879f9',
+                  boxShadow: '0 0 8px #e879f9, 0 0 16px rgba(232,121,249,0.7)',
+                }} />
+              </div>
+
+              {/* Dark gap between inner ring and photo */}
+              <div style={{
+                position: 'absolute', inset: 18, borderRadius: '50%',
                 background: 'var(--bg)',
               }} />
+
               {/* Photo */}
               <div style={{
-                position: 'absolute', inset: 7, borderRadius: '50%', overflow: 'hidden',
+                position: 'absolute', inset: 21, borderRadius: '50%', overflow: 'hidden',
+                boxShadow: '0 0 20px rgba(232,121,249,0.2)',
               }}>
                 <img
                   src={photo}
@@ -286,9 +320,21 @@ export default function Hero() {
 
       {/* Keyframes injected inline for ring spin + pulse */}
       <style>{`
-        @keyframes spinRing { to { transform: rotate(360deg); } }
-        @keyframes pulseGreen { 0%,100%{opacity:1} 50%{opacity:0.3} }
-      `}</style>
+      @keyframes spinCW {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes spinCCW {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+
+      @keyframes pulseGreen {
+        0%,100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+    ` }</style>
     </section>
   );
 }
