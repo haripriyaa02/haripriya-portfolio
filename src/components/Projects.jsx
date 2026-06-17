@@ -30,7 +30,7 @@ const projects = [
     title: 'Newman–Jenkins Output Comparison Tool',
     desc: 'QA utility comparing Newman Jenkins console outputs of old vs. new Postman scripts with request counts and pass/fail results. Automated Excel report generation to speed up QA validation.',
     tags: ['Lovable.ai', 'JavaScript', 'Excel Automation'],
-    github: 'https://github.com/haripriyaa02',
+    github: 'https://github.com/haripriyaa02/Newman-Output-Comparator',
     type: 'QA Utility · 2025',
   },
   {
